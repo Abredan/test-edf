@@ -1,0 +1,22 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  row-gap: 16px;
+
+  i {
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: rotateZ(5deg);
+  }
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}

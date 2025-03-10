@@ -1,0 +1,29 @@
+<app-modal #modal [title]="modalTitle" (onBackdropClicked)="form.reset()">
+  <ng-container ngProjectAs="[body]">
+    <form [formGroup]="form" (ngSubmit)="save()" *ngIf="form">
+      <app-input
+        placeholder="Projet de travaux *"
+        [control]="form.get('description')!"
+      />
+      <app-input placeholder="Utilisateur *" [control]="form.get('user')!" />
+      <app-input
+        placeholder="Contrat"
+        type="number"
+        [control]="form.get('contractId')!"
+      />
+      <input type="submit" hidden [disabled]="!form.valid" />
+    </form>
+  </ng-container>
+
+  <ng-container ngProjectAs="[footer]">
+    <button class="btn btn-outline" (click)="closeModal()">Annuler</button>
+    <button
+      class="btn btn-primary"
+      type="button"
+      (click)="save()"
+      [disabled]="!form.valid"
+    >
+      @if(project?.id) { <span>Modifier</span> } @else { <span>Créer</span> }
+    </button>
+  </ng-container>
+</app-modal>

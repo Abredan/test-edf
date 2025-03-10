@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,500;1,500&display=swap");
+@import "./styles/_variables.scss";
+@import "./styles/_mixins.scss";
+@import "./styles/_typography.scss";
+@import "./styles/_components.scss";
+
+body {
+  font-family: $font-primary;
+  font-size: $font-default;
+  background: $neutral-50;
+  * {
+    // letter-height: auto;
+    box-sizing: border-box;
+  }
+}
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 861px;
+  margin-inline: auto;
+  margin-top: 79px;
+}

@@ -1,0 +1,19 @@
+<div class="projects-list" @staggeredEnter>
+  @for (project of projects; track project.id) {
+  <app-projects-item
+    [project]="project"
+    (onEditClicked)="editProject(project.id)"
+    (onDeleteClicked)="deleteProject(project.id)"
+  />
+  } @empty {
+  <section class="card">
+    <div class="empty">
+      <i class="icon-note"></i>
+      <p class="text text-center text-default text-neutral-600">
+        Créez votre prèmiere demande<br />
+        en cliquant sur le bouton Ajouter.
+      </p>
+    </div>
+  </section>
+  }
+</div>

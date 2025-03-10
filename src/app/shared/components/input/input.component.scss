@@ -1,0 +1,47 @@
+@import "../../../../styles/_variables.scss";
+@import "../../../../styles/_mixins.scss";
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $neutral-600;
+  }
+
+  input {
+    margin: 0;
+    padding: 18px 16.5px;
+    border: 1px solid $neutral-200;
+    border-radius: $radius-default;
+    outline: none;
+    transition: border 0.1s ease-in-out;
+    background-color: var(--bg-color);
+
+    @include typography($font-primary, $font-regular, $font-lg);
+
+    line-height: calc($lineheight-sm / $font-lg);
+    color: $neutral-600;
+
+    ::placeholder {
+      color: $neutral-600;
+    }
+  }
+
+  input.ng-invalid.ng-dirty {
+    border-color: $destructive-color;
+  }
+
+  input:focus {
+    border-color: $primary-color;
+  }
+
+  .error-message {
+    color: $destructive-color;
+    font-size: 12px;
+  }
+}

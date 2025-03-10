@@ -1,0 +1,15 @@
+<ng-container>
+  <dialog class="modal" #modal @enterAnimation>
+    <div class="header">
+      <h1 class="text text-xlarge text-neutral-900">
+        {{ title }}
+      </h1>
+    </div>
+    <div class="content">
+      <ng-content select="[body]"></ng-content>
+    </div>
+    <div class="footer">
+      <ng-content select="[footer]"></ng-content>
+    </div>
+  </dialog>
+</ng-container>

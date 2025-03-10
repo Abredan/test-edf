@@ -1,0 +1,31 @@
+/* Mixins */
+@mixin button-color($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+
+  &:focus {
+    outline: 2px solid lighten($color, 30%);
+  }
+}
+
+@mixin icon($name) {
+  $icon-data: map-get($icons, $name);
+  $icon-path: nth($icon-data, 1);
+  $icon-width: nth($icon-data, 2);
+  $icon-height: nth($icon-data, 3);
+
+  display: inline-block;
+  width: $icon-width;
+  height: $icon-height;
+  background: url(#{$icon-path}) no-repeat center;
+  background-size: contain;
+}
+
+@mixin typography($font, $weight: $font-regular, $size: $font-default) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}

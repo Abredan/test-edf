@@ -1,0 +1,155 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+/* Other Components classes */
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+
+  text-align: center;
+  text-decoration: none;
+  padding: 11px 14px 12px 14px;
+  border-radius: $radius-default;
+  min-width: 104px;
+  height: 40px;
+  line-height: 0;
+
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &.btn-icon {
+    min-width: 0px;
+    padding: 0;
+  }
+
+  &.btn-clear {
+    border: none;
+    background-color: transparent;
+    padding: 5px 0px;
+  }
+
+  &.btn-primary {
+    @include button-color($primary-color);
+    @include typography($font-primary);
+  }
+
+  &.btn-outline {
+    @include button-color($white-color);
+    @include typography($font-primary);
+    border: 1px solid $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+
+    &:active {
+      background-color: darken($white-color, 20%);
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background: $white-color;
+  box-shadow: 0 8px 10px $shadow-color;
+  border-radius: $radius-default;
+  padding: 21px 16px 28px 16px;
+
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: $radius-lg;
+  padding: 7px 21px 6px 21px;
+  text-align: center;
+
+  @include typography($font-accent, $font-regular, $font-default);
+
+  &.badge-warning {
+    background-color: $warning-color-light;
+    color: $warning-color;
+  }
+}
+
+.tip {
+  @include typography($font-primary, $font-regular, $font-default);
+  line-height: $lineheight-sm;
+  padding: 4px 12px 3px 12px;
+  background-color: $neutral-700;
+  color: $lighten-color;
+  border-radius: $radius-sm;
+
+  &.tip-inverse {
+    background-color: $neutral-100;
+    color: $neutral-900;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .btn {
+    min-width: 15px;
+  }
+
+  .btn:hover {
+    background-color: darken($white-color, 5%);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    min-width: 120px;
+    background: $white-color;
+    font-family: $font-primary;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    transform: translateY(-10px) translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px) translateX(-50%);
+  }
+
+  .dropdown-item {
+    border: none;
+    width: 100%;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: calc($font-default/1.2);
+    font-family: $font-primary;
+    color: $neutral-900;
+    transition: background 0.2s;
+    background-color: $white-color;
+    cursor: pointer;
+
+    &:hover {
+      background: lighten($primary-color, 45%);
+      color: $primary-color;
+    }
+  }
+}

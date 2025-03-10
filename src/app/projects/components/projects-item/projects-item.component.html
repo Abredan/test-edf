@@ -1,0 +1,45 @@
+@if(!isDeleting()){
+<div class="card card-project" @animCard (@animCard.done)="onAnimationDone()">
+  <div class="icon">
+    <i class="icon-note"></i>
+  </div>
+
+  <div class="content">
+    <div>
+      @if(projectType()) {
+      <h2 class="text text-caption text-ellipsis text-neutral-600">
+        <span>{{ projectType() }}</span>
+      </h2>
+      }
+      <p class="text text-large text-neutral-900">
+        {{ project.description }}
+      </p>
+    </div>
+    <div class="tags">
+      <span class="tip text-ellipsis">{{ project.user }}</span>
+      @if(project.contractId) {
+      <span class="tip tip-inverse text-lighten text-ellipsis"
+        >Contrat {{ project.contractId }}</span
+      >
+      }
+    </div>
+  </div>
+
+  @if(projectStatus()) {
+  <div class="status">
+    <div class="badge badge-warning">
+      <span>{{ projectStatus() }}</span>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-clear btn-icon">
+        <i class="icon-more"></i>
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" (click)="onEdit()">Modifier</button>
+        <button class="dropdown-item" (click)="onDelete()">Supprimer</button>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}

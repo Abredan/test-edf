@@ -1,0 +1,62 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+.text {
+  font-family: $font-primary;
+  font-size: $font-default;
+  font-weight: $font-regular;
+
+  font-style: normal;
+  font-variant: normal;
+  margin: 0;
+  padding: 0;
+
+  &.text-center {
+    text-align: center;
+  }
+
+  &.text-xlarge {
+    @include typography($font-secondary, $font-medium, $font-xl);
+  }
+
+  &.text-large {
+    @include typography($font-secondary, $font-medium, $font-lg);
+  }
+
+  &.text-regular {
+    @include typography($font-primary, $font-regular, $font-default);
+  }
+
+  &.text-body {
+    @include typography($font-primary, $font-regular, $font-default);
+  }
+
+  &.text-caption {
+    @include typography($font-primary, $font-regular, $font-default);
+  }
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap !important;
+}
+
+.text-neutral-900 {
+  color: $neutral-900;
+}
+
+.text-neutral-600 {
+  color: $neutral-600;
+}
+
+.text-lighten {
+  color: $lighten-color;
+}
+
+/* Icons */
+@each $name, $data in $icons {
+  .icon-#{$name} {
+    @include icon($name);
+  }
+}

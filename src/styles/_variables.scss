@@ -1,0 +1,65 @@
+/* Variables */
+$primary-color: #155eef;
+$neutral-color: #223049;
+$secondary-color: #363f72;
+$shadow-color: #4b556505;
+
+$warning-color: #dc6803;
+$warning-color-light: #fef0c7;
+
+$destructive-color: #dc2626;
+$success-color: #008f3e;
+
+$black-color: #00000000;
+$darken-color: #707070;
+$white-color: #ffffff;
+$lighten-color: #fcfcfd;
+$light-blue-color: #e0f2fe;
+
+$neutral-50: #f8fafc;
+$neutral-100: #eef2f6;
+$neutral-200: #e3e8ef;
+$neutral-600: #4b5565;
+$neutral-700: #364152;
+$neutral-900: #121926;
+
+// Typos variables
+$font-primary: "Inter", sans-serif;
+$font-secondary: "Poppins", sans-serif;
+$font-accent: "Archivo", sans-serif;
+
+$font-xl: 20px;
+$font-lg: 16px;
+$font-default: 14px;
+
+$lineheight-lg: 38px;
+$lineheight-default: 24px;
+$lineheight-sm: 20px;
+
+$font-regular: 300;
+$font-medium: 400;
+
+// Box variables
+$radius-default: 10px;
+$radius-lg: 14px;
+$radius-xl: 15px;
+$radius-sm: 6px;
+
+// Icons
+$icons: (
+  "plus": (
+    "../../public/assets/icons/plus-icon.svg",
+    14px,
+    14px,
+  ),
+  "note": (
+    "../../public/assets/icons/note-icon.svg",
+    16.87px,
+    20px,
+  ),
+  "more": (
+    "../../public/assets/icons/more-icon.svg",
+    3.21px,
+    21.43px,
+  ),
+);

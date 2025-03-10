@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  gap: 6px;
+  margin-bottom: 39px;
+
+  .heading {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 5px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 6px;
+  }
+}

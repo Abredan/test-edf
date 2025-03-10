@@ -1,0 +1,8 @@
+@if(control){
+<div class="input-group" [class.has-error]="control.invalid && control.touched">
+  <input [type]="type" [placeholder]="placeholder" [formControl]="control" />
+  <div class="error-message" *ngIf="control.invalid && control.dirty">
+    {{ errorMessage }}
+  </div>
+</div>
+}

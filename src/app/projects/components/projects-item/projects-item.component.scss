@@ -1,0 +1,46 @@
+.card-project {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  position: relative;
+  gap: 12px;
+  width: 100%;
+
+  &.project-card:hover {
+    box-shadow: 0 15px 25px rgba(75, 85, 101, 0.1);
+    transform: scale(1.01);
+  }
+
+  .icon {
+    background-color: #e0f2fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 48px;
+    max-height: 48px;
+    padding: 14px 15.57px;
+    border-radius: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    flex-grow: 1;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 33.79px;
+    margin-right: 21.99px;
+  }
+}

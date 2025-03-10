@@ -1,0 +1,22 @@
+<section>
+  <header>
+    <div class="heading">
+      <h1 class="text text-xlarge text-neutral-900">Liste des demandes</h1>
+      <p class="text text-small text-neutral-600">
+        Gérer les demandes d'autorisation de travaux.
+      </p>
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary" (click)="createProject()">
+        <i class="icon-plus"></i>
+        <span>Ajouter</span>
+      </button>
+    </div>
+  </header>
+
+  <app-projects-form #projectForm [project]="project()" />
+  <app-projects-list
+    [projects]="projects()"
+    (onEditClicked)="editProject($event)"
+  />
+</section>
