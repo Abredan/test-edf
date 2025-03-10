@@ -67,6 +67,7 @@
   box-shadow: 0 8px 10px $shadow-color;
   border-radius: $radius-default;
   padding: 21px 16px 28px 16px;
+  box-sizing: border-box;
 
   transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 }

@@ -8,10 +8,6 @@ body {
   font-family: $font-primary;
   font-size: $font-default;
   background: $neutral-50;
-  * {
-    // letter-height: auto;
-    box-sizing: border-box;
-  }
 }
 html:has(dialog[open]) {
   overflow: hidden;

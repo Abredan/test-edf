@@ -12,7 +12,7 @@ import { AbstractControl, FormControl, ReactiveFormsModule } from '@angular/form
 export class InputComponent implements AfterViewInit {
   @Input() public placeholder = '';
   @Input() public type = 'text';
-  @Input() public control!: FormControl;
+  @Input() public control!: any;
   public errorMessage = '';
 
   public ngAfterViewInit() {
